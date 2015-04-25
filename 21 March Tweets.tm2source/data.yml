@@ -1,0 +1,27 @@
+_prefs: 
+  disabled: []
+  inspector: false
+  mapid: pestrov.ae2c9a51
+  rev: s-6a6104a0
+  saveCenter: true
+attribution: ''
+center: 
+  - 55.6924
+  - 37.5794
+  - 0
+description: ''
+Layer: 
+  - id: layer_data
+    Datasource: 
+      file: /Users/nikitapestrov/Desktop/Skoltech/Hackathon/layer_data.csv
+      type: csv
+    description: 21 March data
+    fields: 
+      latitude: Number
+      longitude: Number
+    properties: 
+      "buffer-size": 8
+    srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+maxzoom: 6
+minzoom: 0
+name: 21 March Data

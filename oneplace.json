@@ -1,0 +1,20 @@
+[{
+    "type": "Feature",
+    "properties": {
+        "heat": 0.3
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [37.609899, 55.843301]
+    }
+},
+{
+    "type": "Feature",
+    "properties": {
+        "heat": 0.6
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [37.600733, 55.843998]
+    }
+}]
