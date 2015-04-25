@@ -1,7 +1,7 @@
 [{
     "type": "Feature",
     "properties": {
-        "heat": 0.3
+        "heat": 0.2
     },
     "geometry": {
         "type": "Point",
@@ -11,10 +11,20 @@
 {
     "type": "Feature",
     "properties": {
-        "heat": 0.6
+        "heat": 0.5
     },
     "geometry": {
         "type": "Point",
         "coordinates": [37.600733, 55.843998]
+    }
+},
+{
+    "type": "Feature",
+    "properties": {
+        "heat": 0.7
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [37.606733, 55.843998]
     }
 }]

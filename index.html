@@ -21,6 +21,7 @@ L.mapbox.accessToken = 'pk.eyJ1IjoicGVzdHJvdiIsImEiOiJaWjl1OEZNIn0._BnCnZadFvmip
 // As with any other AJAX request, this technique is subject to the Same Origin Policy:
 // http://en.wikipedia.org/wiki/Same_origin_policy
 var map = L.mapbox.map('map', 'pestrov.m0plk0cf');
+
     // The maxZoom states which zoom the markers are fully opaque at -
     // in this case, there are few markers far apart, so we set it low.
 
@@ -33,30 +34,45 @@ var layer = L.mapbox.featureLayer().loadURL('http://nightmunch-data.appsbackend.
     layer.eachLayer(function(l) {
 
         var heat1 =  {
-          0.2: 'blue',
-          0.4:'yellow',
-          0.6:'orange',
-          1: 'red'};
+          0.5: '#FF6D3F',
+          1: '#DC2B00'};
 
         var heat2 =  {
-          0.4: 'blue',
-          0.6:'yellow',
-          0.8:'orange',
-          1: 'red'};
+          0.5: '#FFAA3F',
+          1: '#FF6C00'};
+
+        var heat3 =  {
+          0.5: '#3FC3FF',
+          1: '#0090E9'};
+
 
       var currentHeat = l.feature.properties.heat;
       var heatMap;
-      if (currentHeat > 0.5) {
+      if (currentHeat > 0.66) {
         heatMap = heat1;
-      } else {
+      } else if (currentHeat > 0.33){
         heatMap = heat2;
+      } else {
+        heatMap = heat3;
       }
 
         var heat = L.heatLayer([], { maxZoom: 12 ,  gradient: heatMap}).addTo(map);
 
         heat.addLatLng(l.getLatLng());
+
+
     });
 });
+
+// var layer = L.mapbox.featureLayer().loadURL('http://nightmunch-data.appsbackend.com/oneplace.json').on('ready', function() {
+//
+//   layer.eachLayer(function(l) {
+//   var content = '<p>Heat: ' + l.feature.properties.heat + '<\/p>';
+//   console.log(content);
+//   console.log(typeof(l));
+//   l.bindPopup(content);
+// });
+// });
 
 </script>
 
